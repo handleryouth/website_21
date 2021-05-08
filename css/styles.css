@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Spartan', sans-serif;
+  position: relative;
 }
 
 /*navigation-navbar*/
@@ -33,8 +34,6 @@ body {
   display: flex;
   position: absolute;
   z-index: 1;
-  top: 41.9%;
-  left: 71.3%;
 }
 
 .left-selection {
@@ -54,9 +53,6 @@ body {
 
 
 /*for slide*/
-.slide-container {
-  position: relative;
-}
 
 .slide-image {
   width: 100%;
