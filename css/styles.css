@@ -34,6 +34,8 @@ body {
   display: flex;
   position: absolute;
   z-index: 1;
+  bottom: 0.3rem;
+  right: 0;
 }
 
 .left-selection {
@@ -54,26 +56,18 @@ body {
 
 /*for slide*/
 
-.slide-image {
+.slide-image{
+  position: relative;
+}
+
+.image1-mobile, .image2-mobile, .image3-mobile{
   width: 100%;
-  text-align: center;
 }
 
-.slide-image-desktop{
+.image1-desktop, .image2-desktop, .image3-desktop{
   display: none;
-  visibility: hidden;
+  visibility:hidden;
 }
-
-.slide-transition{
-  animation-name:fadeIn;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes fadeIn{
-  from {opacity: 0;}
-  to {opacity: 1}
-  }
 
 .slide-description {
   margin: 1rem 1.5rem;
@@ -90,17 +84,6 @@ body {
   color: gray;
 }
 
-.description-arrow{
-  display: none;
-  visibility: hidden;
-}
-
-.shop-now-description {
-  margin: 3rem 1.5rem;
-  letter-spacing: 0.5rem;
-  font-size: 1.2rem;
-}
-
 .slide-arrow {
   width: 3rem;
   margin-left: 1rem;
@@ -111,10 +94,6 @@ body {
   visibility: hidden;
 }
 
-.showed {
-  display: block;
-  visibility: visible;
-}
 
 /*second page*/
 .second-page-image {
@@ -142,8 +121,8 @@ body {
   }
 
   .arrow-selection{
-    top: 88.7%;
-    left: 58.3%;
+    right: -7.7rem;
+    bottom: 0;
   }
 
   /*navigation bar*/
@@ -179,11 +158,20 @@ body {
 
 
   /*slide configuration*/
-
-  .slide-image{
-    visibility: hidden;
-    display: none;
+  .slide-container {
+    display: flex;
   }
+
+  .image1-mobile, .image2-mobile, .image3-mobile{
+    display:none;
+    visibility:hidden;
+  }
+
+  .image1-desktop, .image2-desktop, .image3-desktop{
+    display: block;
+    visibility:visible;
+  }
+
 
   .slide-header{
     font-size: 2.5rem;
@@ -191,22 +179,6 @@ body {
 
   .slide-description{
     padding:3rem;
-  }
-  .slide-image-desktop{
-    visibility: visible;
-    display: block;
-  }
-
-  .shop-now-description{
-    display: none;
-    visibility: hidden;
-  }
-
-  .description-arrow{
-    display:block;
-    visibility: visible;
-    text-decoration: none;
-    color: black;
   }
 
   .arrow-image{
