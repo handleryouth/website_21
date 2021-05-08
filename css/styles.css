@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+/*navigation-navbar*/
+.navbar {
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.desktop-navbar{
+  display: none;
+  visibility: hidden;
+}
+
+.left-navigation {
+  margin-left: 1rem;
+}
+
+.middle-navigation {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/*arrow selection*/
+.arrow-selection {
+  background-color: black;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 41.9%;
+  left: 71.3%;
+}
+
+.left-selection {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.right-selection {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+
+.left-selection:hover, .right-selection:hover{
+  background-color:gray;
+}
+
+
+/*for slide*/
+.slide-container {
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  text-align: center;
+}
+
+.slide-image-desktop{
+  display: none;
+  visibility: hidden;
+}
+
+.slide-transition{
+  animation-name:fadeIn;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn{
+  from {opacity: 0;}
+  to {opacity: 1}
+  }
+
+.slide-description {
+  margin: 1rem 1.5rem;
+  line-height: normal;
+}
+
+.slide-header {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.slide-description-word{
+  line-height: 1.5;
+  color: gray;
+}
+
+.description-arrow{
+  display: none;
+  visibility: hidden;
+}
+
+.shop-now-description {
+  margin: 3rem 1.5rem;
+  letter-spacing: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.slide-arrow {
+  width: 3rem;
+  margin-left: 1rem;
+}
+
+.notshowed {
+  display: none;
+  visibility: hidden;
+}
+
+.showed {
+  display: block;
+  visibility: visible;
+}
+
+/*second page*/
+.second-page-image {
+  width: 100%;
+}
+
+.second-page-header {
+  font-size: 1.3rem;
+}
+
+.second-page-description {
+  margin: 3rem 1.5rem;
+}
+
+/*last image*/
+.last-image {
+  width: 100%;
+}
+
+
+@media(min-width:1440px){
+  /*additional class*/
+  .flex-display{
+    display:flex;
+  }
+
+  .arrow-selection{
+    top: 88.7%;
+    left: 58.3%;
+  }
+
+  /*navigation bar*/
+  .navbar{
+    display: none;
+    visibility: hidden;
+  }
+
+  .desktop-navbar{
+    display:flex;
+    visibility: visible;
+    padding: 2.5rem;
+    background-color:transparent;
+    position:absolute;
+    z-index:1;
+
+  }
+
+  .desktop-navbar-left{
+    margin-right: 2rem;
+  }
+
+  .desktop-link{
+    margin: 0 1rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0;
+  }
+
+  .desktop-link:hover{
+    border-bottom: 2px solid white;
+  }
+
+
+  /*slide configuration*/
+
+  .slide-image{
+    visibility: hidden;
+    display: none;
+  }
+
+  .slide-header{
+    font-size: 2.5rem;
+  }
+
+  .slide-description{
+    padding:3rem;
+  }
+  .slide-image-desktop{
+    visibility: visible;
+    display: block;
+  }
+
+  .shop-now-description{
+    display: none;
+    visibility: hidden;
+  }
+
+  .description-arrow{
+    display:block;
+    visibility: visible;
+    text-decoration: none;
+    color: black;
+  }
+
+  .arrow-image{
+    margin-left: 1rem;
+  }
+
+
+  /*second-page*/
+  .second-page{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .second-page1, .second-page3{
+    flex-basis: 55%;
+    flex-grow: 1;
+  }
+
+  .second-page2{
+    width: 70%;
+  }
+
+  .second-page-header{
+    letter-spacing:5px;
+    font-size: 1.2rem;
+  }
+
+  .second-page-description1{
+    color: gray;
+    line-height: 1.3;
+  }
+}
